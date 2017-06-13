@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Funky Torus</title>
+  <style>
+    body { margin: 0; overflow: hidden; }
+    canvas {background: blue;}
+  </style>
+</head>
+<body>
+  <canvas id="myCanvas"></canvas>
+  <script src ="src/three.js"></script>
+  <script>
+    var renderer = new THREE.WebGLRenderer({canvas: document.getElementById('myCanvas'), antialias: true});
+    renderer.setClearColor(0x1aefb3);
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setSize(window.innerWidth, window.innerHeight);
+
+    var camera = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 0.1, 3000);
+
+    var scene = new THREE.Scene();
+
+    renderer.render(scene, camera);
+  </script>
+
+
+</body>
+</html>
